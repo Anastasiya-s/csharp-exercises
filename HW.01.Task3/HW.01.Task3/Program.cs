@@ -29,6 +29,7 @@ Int64[]  ArrayReverse(Int64[] inputArray)
         inputArray[i] = inputArray[inputArray.Length - 1 - i];
         inputArray[inputArray.Length - 1 - i] = temp;
     }
+
     return inputArray;
 }
 
