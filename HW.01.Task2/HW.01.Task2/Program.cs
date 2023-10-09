@@ -28,8 +28,14 @@ bool isValidLastIndex = false;
 while (!isValidLastIndex)
 {
     isValidLastIndex = int.TryParse(Console.ReadLine(), out lastIndex);
+    if (lastIndex > ints.Length || lastIndex < 0)
+    {
+        Console.WriteLine($"Please, enter valid position: 0 ... {ints.Length}");
+        isValidLastIndex = false;
+    }
 
 }
+
 
 for (int i = ints.Length - 1; i > lastIndex - 1; i--)
 {
